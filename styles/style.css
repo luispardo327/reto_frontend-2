@@ -9,15 +9,18 @@
 
 
 
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+  list-style-type:none ;
+  text-decoration: none;
 }
 
 body{
     background-color: var(--Yellow) ;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,20 +28,22 @@ body{
     justify-content: center;
 }
 
-.container-info{
+main{
     background-color:var(--White) ;
-    width:384px ;
-    height: 522px;
+    max-width:384px ;
+    min-height: 522px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     margin: 20px;
+    border: 1px solid black;
+    box-shadow: 8px 10px 0px black;
 }
 
 .container{
     padding: 20px;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: flex-start;
     flex-direction: column;
     
@@ -53,55 +58,74 @@ body{
 
 .content-text{
     max-width: 336px;
-    height: auto;
 }
 
 .text-one{
     background-color: var(--Yellow);
-    width: 82px;
+    width: fit-content; 
     height: 29px ;
+    font-weight: bold;
     font-size: 14px;
     border-radius: 4px;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .paragraph-1{
+    font-size: 14px;
     display: flex;
     flex-direction: row;
     justify-content: start;
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     color: var(--Gray950) ;
     text-shadow: 1px 1px 2px black;
 }
-.text-two{
-    color: var(--Gray950);
+.paragraph-1:hover{
+    text-shadow: none;
 }
 
+.text-two{
+    color: var(--Gray950);
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
 
-.text-two :hover{
+/* ojo aca me dio duro este HOVER   solo por no tener la palbra pegada  (.text-two :hover)  lo tenia asi   */
+.text-two:hover{
     color: var(--Yellow);
     cursor: pointer;
 }
 
-
-
 .paragraph-2{
-    margin: 5px;
+    font-size: 16px;
+    font-weight: medium;
+    color: var(--Gray500);
+    padding: 10px 10px 10px 0;
+
     text-align: start;
 }
 
 .content-profile{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    width: auto;
-    height: auto;
 }
 
 .img-profile{
     border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    
 }
-
+.author-name{
+    margin: 15px;
+    font-weight: bold ;
+    font-size:14px ;
+}
 .attribution { 
     font-size: 11px; text-align: center; 
 }
